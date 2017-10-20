@@ -1,0 +1,165 @@
+/* Header */
+
+
+#zone{
+
+    width: -20px;
+    height: -20px;
+    position: relative;
+
+
+}
+.header {
+    color: white;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 65%;
+    background: url(http://www.magic4walls.com/wp-content/uploads/2015/04/FUJI-X-T1-camera-classic-lens-hi-tech-wooden-background-x-t1.jpg) no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Arapey:400italic);
+body {
+    background:black;
+  -webkit-font-smoothing: antialiased;
+  min-width: 1200px;
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+
+.grid {
+  padding: 60px;
+  margin: 0 auto;
+  max-width: 1200px;
+  color: black;
+}
+
+.grid--item {
+  position: relative;
+  margin-top: -90px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: calc(33.33% - 10px);
+  float: left;
+  transition: all 0.5s;
+  overflow: hidden;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -webkit-shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.grid--item:before {
+  display: block;
+  padding-top: 112.5%;
+  content: '';
+}
+.grid--item:nth-child(1), .grid--item:nth-child(2) {
+  margin-top: 0;
+}
+.grid--item:nth-child(7n - 1), .grid--item:nth-child(1) {
+  margin-left: 185px;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  
+}
+
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+  color: white;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: all 0.5s;
+  -webkit-shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1,
+h2 {
+  font-family: 'Arapey';
+  font-style: italic;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 90px;
+  text-align: center;
+  font-size: 56px;
+  color : white;
+}
+
+h2 {
+  font-size: 32px;
+}
+h2:before, h2:after {
+  display: inline-block;
+  margin: 0 0.5em;
+  width: 0.75em;
+  height: 0.03em;
+  background: turquoise;
+  content: '';
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+
+.desc {
+  margin: 1em 0 0;
+  font-family: 'ATC Overlook';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1.5;
+  color: turquoise;
+}
+
+.grid--item:hover .img:before,
+.grid--item:hover .img:after,
+.grid--item:hover .container {
+  opacity: 1;
+}
+.grid--item:hover .container {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
